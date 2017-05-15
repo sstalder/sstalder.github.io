@@ -1,7 +1,0 @@
-// Place your settings in this file to overwrite default and user settings.
-{
-    // Enable/disable JavaScript validation. (For Flow)
-    "javascript.validate.enable": false,
-    // Enable/disable default JavaScript formatter (For Prettier)
-    "javascript.format.enable": false
-}
