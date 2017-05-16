@@ -1,11 +1,28 @@
-h1 {
-    font-size: 22px;
-    line-height: 22px;
+#root h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    color: #121212;
+}
+
+.jumbotron {
+    padding: 20px 40px;
+}
+
+.jumbotron h1 {
+    font-size: 50px;
+    margin: 10px;
+}
+
+.jumbotron p {
+    top: -10px;
+    position: relative;
 }
 
 h1 .glyphicon {
     padding-right: 10px;
     font-size: .8em;
+    color: #9C5EDA;
 }
 
 h2 {
@@ -13,8 +30,47 @@ h2 {
     line-height: 18px;
 }
 
+h2 .label-success {
+    background: #83D42C;
+    color: #121212;
+    padding: .3em .6em .3em;
+    top: -2px;
+    position: relative;
+}
+
 .job {
-    padding-bottom: 10px;
     margin-bottom: 20px;
-    border-bottom: 1px dotted #ccc;
+}
+
+.job h2 {
+    border-top: 5px solid #9C5EDA;
+    border-left: 5px solid #9C5EDA;
+    border-right: 5px solid #83D42C;
+    border-bottom: 5px solid #83D42C;
+    background: #121212;
+    color: #fff;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+    margin-bottom: 20px;
+}
+
+.certification {
+    margin-bottom: 20px;
+}
+
+.certification h2 {
+    border-top: 5px solid #9C5EDA;
+    border-left: 5px solid #9C5EDA;
+    border-right: 5px solid #83D42C;
+    border-bottom: 5px solid #83D42C;
+    background: #121212;
+    color: #fff;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
 }

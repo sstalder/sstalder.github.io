@@ -16,7 +16,7 @@ const client = createClient({
 });
 
 function createMarkup(html) {
-  return {__html: html};
+  return { __html: html };
 }
 
 class App extends Component {
@@ -34,14 +34,14 @@ class App extends Component {
     let converter = new Converter();
 
     // Load jobs
-    client.getEntries({ 
-        content_type: 'job',
-        order: '-fields.fromYear,-fields.toYear'
-      })
+    client.getEntries({
+      content_type: 'job',
+      order: '-fields.fromYear,-fields.toYear'
+    })
       .then((response) => {
         let jobs = [];
-        
-        response.items.forEach(function(job) {
+
+        response.items.forEach(function (job) {
           jobs.push({
             id: job.sys.id,
             company: job.fields.company,
@@ -59,13 +59,13 @@ class App extends Component {
 
     // Load certifications
     client.getEntries({
-        content_type: 'certifications',
-        order: '-fields.year'
-      })
+      content_type: 'certifications',
+      order: '-fields.year'
+    })
       .then((response) => {
         let certifications = [];
-        
-        response.items.forEach(function(cert) {
+
+        response.items.forEach(function (cert) {
           certifications.push({
             id: cert.sys.id,
             title: cert.fields.title,
@@ -82,29 +82,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1>
-          <span className="glyphicon glyphicon-tasks"></span>
-          Jobs
-        </h1>
-
-        <div className="row">
-          <div className="col-xs-12">
-            {this.state.jobs.map(function(item) {
-              return (
-                <div key={item.id} className="job">
-                  <h2>
-                    {item.company}
-                    <span className="pull-right label label-default">{item.fromDate} - {item.toDate}</span>
-                  </h2>
-                  
-                  <span dangerouslySetInnerHTML={createMarkup(item.description)}></span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
+      <div>
         <h1>
           <span className="glyphicon glyphicon-certificate"></span>
           Certifications
@@ -112,13 +90,35 @@ class App extends Component {
 
         <div className="row">
           <div className="col-xs-12">
-            {this.state.certifications.map(function(item) {
+            {this.state.certifications.map(function (item) {
               return (
                 <div key={item.id} className="certification">
                   <h2>
                     {item.title}
-                    <span className="pull-right label label-default">{item.year}</span>
+                    <span className="pull-right label label-success">{item.year}</span>
                   </h2>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <h1>
+          <span className="glyphicon glyphicon-tasks"></span>
+          Work History
+        </h1>
+
+        <div className="row">
+          <div className="col-xs-12">
+            {this.state.jobs.map(function (item) {
+              return (
+                <div key={item.id} className="job">
+                  <h2>
+                    {item.company}
+                    <span className="pull-right label label-success">{item.fromDate} - {item.toDate}</span>
+                  </h2>
+
+                  <span dangerouslySetInnerHTML={createMarkup(item.description)}></span>
                 </div>
               );
             })}
