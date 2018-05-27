@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Converter } from 'showdown';
-import moment from 'moment';
+import React, { Component } from 'react'
+import { Converter } from 'showdown'
+import moment from 'moment'
 import { createClient } from 'contentful'
-// import jQuery from 'jquery';
-// import bootstrap from 'bootstrap';
+//import jQuery from 'jquery'
+//import bootstrap from 'bootstrap'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import './App.css';
+import './App.css'
 
-const SPACE_ID = '1si34rb84bgx';
-const ACCESS_TOKEN = '76ca32dfc9e1497a8421320b8328e83bd14eb656b6f642ba25e61fb6392514f2';
+const SPACE_ID = '1si34rb84bgx'
+const ACCESS_TOKEN = '76ca32dfc9e1497a8421320b8328e83bd14eb656b6f642ba25e61fb6392514f2'
 
 const client = createClient({
   space: SPACE_ID,
@@ -129,4 +129,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
