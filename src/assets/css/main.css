@@ -1139,10 +1139,10 @@ ul#nav li.current a {
   list-style: none;
 }
 .bars li {
-  position: relative;
-  margin-bottom: 60px;
+  display: inline-block;
+  margin: 5px;
+  padding: 3px 5px;
   background: #ccc;
-  height: 42px;
   border-radius: 3px;
 }
 .bars li em {
@@ -1152,7 +1152,6 @@ ul#nav li.current a {
   letter-spacing: 2px;
   font-weight: normal;
   position: relative;
-  top: -36px;
 }
 .bar-expand {
   position: absolute;

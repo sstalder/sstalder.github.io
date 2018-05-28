@@ -11,7 +11,7 @@ const Education = () => (
     <div className="nine columns main-col">
       <div className="row item">
         <div className="twelve columns">
-          <h3>DeVry University</h3>
+          <h3>Devry University</h3>
           <p className="info">
             Computer Information Systems
             <span>&bull;</span>

@@ -4,6 +4,7 @@
   "version": "1.0.1",
   "author": "Aman Mittal <amandeepmittal@live.com>",
   "dependencies": {
+    "contentful": "^6.1.1",
     "gatsby": "^1.9.261",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-google-analytics": "^1.0.12",
@@ -17,8 +18,10 @@
     "gatsby-source-filesystem": "^1.5.36",
     "gatsby-transformer-remark": "^1.7.21",
     "gatsby-transformer-sharp": "^1.6.14",
+    "moment": "^2.22.1",
     "react-icons": "2.2.7",
     "react-slick": "0.16.0",
+    "showdown": "^1.8.6",
     "slick-carousel": "1.8.1",
     "typography-theme-bootstrap": "0.16.7"
   },
